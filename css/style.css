@@ -1,29 +1,42 @@
 body {
-
+  background-color: aquamarine;
 }
 
-main {
-
+.header {
+background-color: aqua;
+}
+.container {
+  display: flex;
+  flex-direction: column; /* stack vertically on small screens */
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
 }
 
-.profile-card {
-
+.photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* optional */
 }
 
-.profile-image {
-
+.contact {
+  text-align: center;
 }
 
-.profile-info {
-
+.company h2 {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-footer {
+@media (min-width: 700px) {
+  .container {
+    flex-direction: row; /* side-by-side */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
+  .contact, .company {
+    text-align: left;
   }
 }
